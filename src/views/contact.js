@@ -36,7 +36,7 @@ export default function Contact() {
 
   const [contactData, setData] = useState([]);
 
-  const url = 'https://deregallera.herokuapp.com/';
+  const url = 'https://dginnovate.herokuapp.com/';
 
   useEffect(() => {
     axios

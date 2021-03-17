@@ -31,7 +31,7 @@ export default function Nav() {
       <a className="navbar-item logo" href="/">
         <img src="https://res.cloudinary.com/deregallera/image/upload/v1614855384/d-logo.png" alt="logo" width="175" height="28"/>
       </a>
-        <button  onClick={() => setShowMenu(!showMenu)} className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMobile">
+        <button onClick={() => setShowMenu(!showMenu)} className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMobile">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
