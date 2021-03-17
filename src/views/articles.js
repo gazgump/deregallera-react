@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
-import slugify from 'slugify';
+
 import {
   useParams,
   useHistory
@@ -39,9 +39,10 @@ export default function Articles() {
 
   const url = 'https://deregallera.herokuapp.com';
 
-  let { id } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
+
     axios
       .get(`${url + "/articles?slug=" + id}`)
       .then(function(response) {
@@ -49,7 +50,7 @@ export default function Articles() {
       })
       .catch(error => console.log(error));
 
-  }, []);
+  }, [id]);
 
 
   return (
@@ -61,7 +62,7 @@ export default function Articles() {
         <h1 className="article-title">{data.name}</h1>
         <Back/>
 
-        <img className="article-image" src={data.image} alt="article image"/>
+        <img className="article-image" src={data.image} alt=""/>
 
         <div className="article-description" dangerouslySetInnerHTML={{__html: data.description }}></div>
         <div className="share-buttons">

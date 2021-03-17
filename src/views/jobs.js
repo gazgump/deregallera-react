@@ -26,7 +26,7 @@ export default function Jobs() {
       <FadeIn delay={200} duration={1200}>
       <div className="jobs">
         <h1>Join the team</h1>
-        <img src={data.image} alt="jobs page image" />
+        <img src={data.image} alt="" />
         <p className="job-blurb">
           {data.blurb}
         </p>

@@ -10,8 +10,6 @@ export default function News() {
 
   const url = 'https://deregallera.herokuapp.com/';
 
-  var dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-
   useEffect(() => {
     axios
       .get(`${url}articles`)
@@ -27,7 +25,7 @@ export default function News() {
       <div className="news-article" key={item.id}>
         <a href={"/articles/" + item.slug}>
           <div className="article-image">
-            <img src={item.image} />
+            <img src={item.image} alt=""/>
             <span className="article-date">
             {Moment(item.date).format('Do MMM YYYY')}
             </span>
