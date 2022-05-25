@@ -9,7 +9,7 @@ export default function Jobs() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://dginnovate.herokuapp.com/';
+  const url = 'https://deregallera.herokuapp.com/';
 
   useEffect(() => {
     axios

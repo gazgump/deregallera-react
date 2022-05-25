@@ -5,7 +5,7 @@ import FadeIn from '../shared/fadein';
 import { useForm } from 'react-hook-form';
 
 import { init, sendForm } from 'emailjs-com';
-init("user_tAEHax1kwV3nZouwonIFi");
+init("user_w147OkT7oZFcCVisfNfB9");
 
 export default function Contact() {
 
@@ -25,7 +25,7 @@ export default function Contact() {
   const onSubmit = (data) => {
     console.log(data);
     generateContactNumber();
-    sendForm('default_service', 'template_g6suxij', '#contact-form')
+    sendForm('default_service', 'template_jkf7e3q', '#contact-form')
       .then(function(response) {
         alert('email sent!');
         console.log('SUCCESS!', response.status, response.text);
@@ -36,7 +36,7 @@ export default function Contact() {
 
   const [contactData, setData] = useState([]);
 
-  const url = 'https://dginnovate.herokuapp.com/';
+  const url = 'https://deregallera.herokuapp.com/';
 
   useEffect(() => {
     axios

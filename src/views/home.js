@@ -76,7 +76,9 @@ export default function Home() {
               <img src={data.image3} alt=""/>
             </div>
           </div>
-          <Link to="/partners" className="button primary">See all of our partners</Link>
+        </div>
+        <div className="partner-button-holder">
+          <Link to="/partners" className="button primary partner-button">See all of our partners</Link>
         </div>
       </div>
       <div className="latest-news-section">

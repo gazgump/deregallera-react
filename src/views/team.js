@@ -7,7 +7,7 @@ export default function Team() {
 
   const [data, setData] = useState([]);
 
-  const url = 'https://dginnovate.herokuapp.com/';
+  const url = 'https://deregallera.herokuapp.com/';
 
   useEffect(() => {
     axios
@@ -19,60 +19,68 @@ export default function Team() {
 
   }, []);
 
-  const engItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <li key={item.id}>
+  const engItems = data.sort((a, b) => a.order > b.order ? 1:-1).map((item, tag) =>
+      <React.Fragment key={item.id}>
       {item.tag === 'engineering' ?
-      <div className="team-member">
-        <h3 className="member-name">{ item.name }</h3>
-        <h5 className="member-role">{ item.role }</h5>
-        <div className="member-blurb">
-          { item.blurb }
+      <li key={item.id}>
+        <div className="team-member">
+          <h3 className="member-name">{ item.name }</h3>
+          <h5 className="member-role">{ item.role }</h5>
+          <div className="member-blurb">
+            { item.blurb }
+          </div>
         </div>
-      </div>
+      </li>
       : null }
-    </li>
+      </React.Fragment>
   );
 
-  const matItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <li key={item.id}>
+  const matItems = data.sort((a, b) => a.order > b.order ? 1:-1).map((item, tag) =>
+    <React.Fragment key={item.id}>
       {item.tag === 'materials' ?
-      <div className="team-member">
-        <h3 className="member-name">{ item.name }</h3>
-        <h5 className="member-role">{ item.role }</h5>
-        <div className="member-blurb">
-          { item.blurb }
+      <li key={item.id}>
+        <div className="team-member">
+          <h3 className="member-name">{ item.name }</h3>
+          <h5 className="member-role">{ item.role }</h5>
+          <div className="member-blurb">
+            { item.blurb }
+          </div>
         </div>
-      </div>
+      </li>
       : null }
-    </li>
+    </React.Fragment>
   );
 
-  const manItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, id) =>
-    <li key={item.id}>
+  const manItems = data.sort((a, b) => a.order > b.order ? 1:-1).map((item, id) =>
+    <React.Fragment key={item.id}>
       { item.tag === 'management' ?
-      <div className="team-member">
-        <h3 className="member-name">{ item.name }</h3>
-        <h5 className="member-role">{ item.role }</h5>
-        <div className="member-blurb">
-          { item.blurb }
+      <li key={item.id}>
+        <div className="team-member">
+          <h3 className="member-name">{ item.name }</h3>
+          <h5 className="member-role">{ item.role }</h5>
+          <div className="member-blurb">
+            { item.blurb }
+          </div>
         </div>
-      </div>
+      </li>
       : null }
-    </li>
+    </React.Fragment>
   );
 
-  const opsItems = data.sort((a, b) => a.id > b.id ? 1:-1).map((item, tag) =>
-    <li key={item.id}>
+  const opsItems = data.sort((a, b) => a.order > b.order ? 1:-1).map((item, tag) =>
+    <React.Fragment key={item.id}>
       {item.tag === 'operations' ?
-      <div className="team-member">
-        <h3 className="member-name">{ item.name }</h3>
-        <h5 className="member-role">{ item.role }</h5>
-        <div className="member-blurb">
-          { item.blurb }
+      <li key={item.id}>
+        <div className="team-member">
+          <h3 className="member-name">{ item.name }</h3>
+          <h5 className="member-role">{ item.role }</h5>
+          <div className="member-blurb">
+            { item.blurb }
+          </div>
         </div>
-      </div>
+      </li>
       : null }
-    </li>
+    </React.Fragment>
   );
 
   return (

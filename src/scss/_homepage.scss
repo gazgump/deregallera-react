@@ -93,14 +93,28 @@
   }
 }
 
+.partner-button-holder {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
 .latest-news-section {
+  position: relative;
   text-align: center;
   background: url('https://res.cloudinary.com/deregallera/image/upload/v1615639559/panel-dots.jpg');
+  background-color: $light-grey;
+  background-size: cover;
   width: 100%;
   height: auto;
   padding: 2rem 1rem;
+  border-top: 3px solid $light-grey;
+  border-bottom: 3px solid $light-grey;
   @media ( min-width: 1024px ) {
-    padding: 4rem 0;
+    padding: 3rem 0;
+  }
+  .squiggle {
+    margin-bottom: 1rem;
   }
   .columns {
     @media ( min-width: 1024px ) {
@@ -108,7 +122,18 @@
       margin: 0 auto;
     }
   }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($white, 0.9);
+    z-index: 0;
+  }
   span {
+    position: relative;
+    z-index: 1;
     color: $white;
     font-size: 25px;
     font-weight: 500;
@@ -118,6 +143,8 @@
     }
   }
   h2 {
+    position: relative;
+    z-index: 1;
     color: $white;
     font-size: 50px;
     font-weight: 700;
@@ -125,7 +152,7 @@
     margin: 0;
     margin-top: 0rem!important;
     @media ( min-width: 1024px ) {
-      font-size: 85px;
+      font-size: 55px;
     }
   }
   .news-thumb {
@@ -138,16 +165,22 @@
   }
   .overlay-container {
     position: relative;
+    height: 99%;
+    line-height: 1;
     .overlay {
       position: absolute;
       bottom: 100%;
       left: 0;
       right: 0;
-      background-color: rgba($black, 0.5);
+      background-color: rgba($black, 0.7);
       overflow: hidden;
       width: 100%;
       height:0;
       transition: .5s ease;
+      @media ( max-width: 768px ) {
+        bottom: 0;
+        height: 100%;
+      }
     }
     &:hover {
       .overlay {
@@ -157,14 +190,11 @@
     }
     .text {
       color: white;
-      font-size: 20px;
-      position: absolute;
-      top: 50%;
-      left: 40%;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
+      padding: 1rem;
+      font-size: 18px;
+      position: relative;
       text-align: left;
+      line-height: 1.2;
     }
     .button {
       position: absolute;

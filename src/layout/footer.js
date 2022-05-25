@@ -64,7 +64,7 @@ export default function Footer() {
           <div className="column is-full-mobile is-one-third">
             <h4 className="latest-news">Latest News</h4>
             <ul>
-              {newsItems}
+              {newsItems.slice(0, 5)}
             </ul>
           </div>
         </div>
